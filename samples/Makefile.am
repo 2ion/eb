@@ -38,4 +38,4 @@ booklist_DEPENDENCIES = $(LIBEB) $(ZLIBDEPS) $(INTLDEPS)
 
 EXTRA_DIST = README
 
-INCLUDES = -I$(srcdir)/..
+AM_CPPFLAGS = -I$(srcdir)/..

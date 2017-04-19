@@ -23,7 +23,7 @@ dist_noinst_HEADERS = build-pre.h dummyin6.h ebnet.h getaddrinfo.h linebuf.h \
 	urlparts.h
 nodist_noinst_HEADERS = build-post.h
 
-INCLUDES = -DEB_BUILD_LIBRARY $(INTLINCS) $(ZLIBINCS)
+AM_CPPFLAGS = -DEB_BUILD_LIBRARY $(INTLINCS) $(ZLIBINCS)
 
 EXTRA_DIST = stamp-widealt-h stamp-widefont-h build-post.h.in
 CLEANFILES = stamp-build-post-h stamp-sysdefs-h build-post.h sysdefs.h

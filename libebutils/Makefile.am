@@ -11,7 +11,7 @@ EXTRA_DIST = getopt_long.pl ebutils.h.in
 CLEANFILES = stamp-ebutils-h ebutils.h
 BUILT_SOURCES = ebutils.h
 
-INCLUDES = -I$(top_srcdir) @INTLINCS@ @ICONVINCS@
+AM_CPPFLAGS = -I$(top_srcdir) @INTLINCS@ @ICONVINCS@
 
 ebutils.h: stamp-ebutils-h
 stamp-ebutils-h: ebutils.h.in Makefile

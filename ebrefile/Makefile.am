@@ -10,5 +10,5 @@ ebrefile_LDADD = $(LIBEBUTILS) $(LIBEB) $(ZLIBLIBS) $(INTLLIBS) $(ICONVLIBS)
 ebrefile_DEPENDENCIES = $(LIBEBUTILS) $(LIBEB) $(ZLIBDEPS) $(INTLDEPS) \
 	$(ICONVDEPS)
 
-INCLUDES = -I../libebutils -I$(top_srcdir)/libebutils \
+AM_CPPFLAGS = -I../libebutils -I$(top_srcdir)/libebutils \
 	-I../eb -I$(top_srcdir)/eb $(INTLINCS)

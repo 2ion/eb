@@ -10,5 +10,5 @@ ebinfo_LDADD = $(LIBEBUTILS) $(LIBEB) $(ZLIBLIBS) $(INTLLIBS) $(ICONVLIBS)
 ebinfo_DEPENDENCIES = $(LIBEBUTILS) $(LIBEB) $(ZLIBDEPS) $(INTLDEPS) \
 	$(ICONVDEPS)
 
-INCLUDES = -I../libebutils -I$(top_srcdir)/libebutils -I$(top_srcdir) \
+AM_CPPFLAGS = -I../libebutils -I$(top_srcdir)/libebutils -I$(top_srcdir) \
 	$(INTLINCS)

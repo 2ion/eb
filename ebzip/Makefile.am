@@ -13,7 +13,7 @@ ebzip_LDADD = $(LIBEBUTILS) $(LIBEB) $(ZLIBLIBS) $(INTLLIBS) $(ICONVLIBS)
 ebzip_DEPENDENCIES = $(LIBEB) $(LIBEBUTILS) $(ZLIBDEPS) $(INTLDEPS) \
 	$(ICONVDEPS)
 
-INCLUDES = -I../libebutils -I$(top_srcdir)/libebutils \
+AM_CPPFLAGS = -I../libebutils -I$(top_srcdir)/libebutils \
 	-I../eb -I$(top_srcdir)/eb $(INTLINCS) $(ZLIBINCS)
 
 # Shorten command name `ebzipinfo' for DOS & Win32.
