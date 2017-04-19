@@ -1,0 +1,2 @@
+ * m4: finish fixing AC_* macros
+ * gettext: update gettext macros and setup (non-trivial)
