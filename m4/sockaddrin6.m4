@@ -31,12 +31,12 @@ dnl * Check for struct sockaddr_in6
 dnl *
 AC_DEFUN([AC_STRUCT_SOCKADDR_IN6],
 [AC_CACHE_CHECK(for struct sockaddr_in6, ac_cv_struct_sockaddr_in6,
-[AC_COMPILE_IFELSE([
+[AC_COMPILE_IFELSE([AC_LANG_SOURCE([
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 struct sockaddr_in6 address;
-], [ac_cv_struct_sockaddr_in6=yes], [ac_cv_struct_sockaddr_in6=no])])
+])], [ac_cv_struct_sockaddr_in6=yes], [ac_cv_struct_sockaddr_in6=no])])
 if test "$ac_cv_struct_sockaddr_in6" = yes; then
     AC_DEFINE(HAVE_STRUCT_SOCKADDR_IN6, 1,
 [Define to 1 if <netinet/in.h> defines `struct sockaddr_in6'])
@@ -47,12 +47,12 @@ dnl * Check for struct sockaddr_storage
 dnl * 
 AC_DEFUN([AC_STRUCT_SOCKADDR_STORAGE],
 [AC_CACHE_CHECK(for struct sockaddr_storage, ac_cv_struct_sockaddr_storage,
-[AC_COMPILE_IFELSE([
+[AC_COMPILE_IFELSE([AC_LANG_SOURCE([
 #include <sys/types.h>
 #include <sys/socket.h>
 #include <netinet/in.h>
 struct sockaddr_storage address;
-], [ac_cv_struct_sockaddr_storage=yes], [ac_cv_struct_sockaddr_storage=no])])
+])], [ac_cv_struct_sockaddr_storage=yes], [ac_cv_struct_sockaddr_storage=no])])
 if test "$ac_cv_struct_sockaddr_storage" = yes; then
     AC_DEFINE(HAVE_STRUCT_SOCKADDR_STORAGE, 1,
 [Define to 1 if <netinet/in.h> defines `struct sockaddr_storage'])
